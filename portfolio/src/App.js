@@ -1,7 +1,8 @@
 import './App.css';
 import { Button, Stack } from '@mui/material';
-import { IntroBox, IntroPaper, IntroHeadingTypography, IntroBodyTypography } from './styles/app.styles.js'
-import {  LinkedInIcon, GitHubIcon } from '@mui/icons-material';
+import { IntroBox, IntroPaper, IntroHeadingTypography, IntroBodyTypography } from './styles/app.styles.js';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
             hi, i'm <strong>karyna</strong>!
           </IntroHeadingTypography>
           <Stack spacing={2} direction="row">
+            {/* how to add functionality to the buttons */}
             <Button variant="outlined">Outlined</Button>
             <Button variant="outlined">Outlined</Button>
           </Stack>
@@ -23,9 +25,11 @@ function App() {
             along with some of my hobbies and other projects relating to my major.
             Without further ado, welcome to my portfolio!
           </IntroBodyTypography>
-          <svg data-testid="LinkedInIcon"></svg>
-          <svg data-testid="GitHubIcon"></svg>
-
+          {/* make the icons clickable, CENTER THEM */}
+          <Stack spacing={2} direction="row">
+            <LinkedInIcon />
+            <GitHubIcon />
+          </Stack>
 
         </IntroPaper>
       </IntroBox>
