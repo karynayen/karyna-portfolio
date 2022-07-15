@@ -4,46 +4,27 @@ import { IntroBox, IntroPaper, IntroHeadingTypography, IntroBodyTypography, Intr
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
+import MyToolbar from './components/toolbar/toolbar.js';
+
 //abstract later
 // make sure everything is formated for phones
 //figure out some cool animations on scrolling!!
 // background can include leaves for hiking vibes
 function App() {
+  const backgroundColor = '#C3C8EA';
   return (
     <>
       <GlobalStyles
         styles={{
-          body: { backgroundColor: '#C3C8EA' }
+          body: { backgroundColor: backgroundColor }
         }}
       />
-      {/* make a tool bar object */}
-      <Box>
-        <AppBar elevation={0} position="static">
-          <Toolbar sx={{ padding: 1, backgroundColor: '#C3C8EA' }}>
-            <Button sx={{ fontSize: 30, fontWeight: 'bold', textTransform: 'none', color: 'black' }}>Karyna Yen //</Button>
-          </Toolbar>
-        </AppBar>
-      </Box>
-
+      
+      <MyToolbar backgroundColor={backgroundColor}> </MyToolbar>
 
       <IntroBox>
 
         <IntroPaper elevation={3}>
-
-          {/* <Card
-            sx={{
-              width: '250px',
-              height: '250px',
-              borderRadius: '50%',
-
-            }}>
-            <CardMedia
-              component="img"
-              height="250"
-              image={require('./images/me.jpg')}
-              alt="A Picture of Karyna!!"
-            />
-          </Card> */}
           {/* now edit the spacing! */}
           <IntroHeadingTypography variant="h1">
             hi, i'm <strong>karyna</strong>!
