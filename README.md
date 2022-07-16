@@ -1,6 +1,6 @@
 # hello
 
-how to run: 
-go into the portfolio directory
-npm install
-npm install @mui/material 
+### how to run: 
+<br>go into the portfolio directory
+<br> npm install
+<br>npm install @mui/material 
