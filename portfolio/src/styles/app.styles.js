@@ -16,10 +16,9 @@ const IntroPaper = styled(Paper)(({ elevation }) => ({
     color: 'white',
     width: '50%',
     height: '100%',
-    backgroundColor: '#5967C5', //'#BBB6DF',
+    backgroundColor: '#5967C5', 
     padding: 30,
-    margin: '1% 0 0 2%',
-
+    margin: '4% 0 0 2%',
 }))
 
 const IntroHeadingTypography = styled(Typography)(({ variant }) => ({
@@ -59,7 +58,7 @@ const IntroContainedButton = styled(Button) ({
 
 const IntroOutlinedButton = styled(Button)(({ variant }) => ({
     color: 'white',
-    backgroundColor: '#5967C5', //#3f50b5',
+    backgroundColor: '#5967C5', 
     borderColor: 'white',
     fontWeight: 'bold',
     '&:hover': {

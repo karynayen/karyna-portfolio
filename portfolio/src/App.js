@@ -1,5 +1,5 @@
 import './App.css';
-import { CardMedia, GlobalStyles, Card, Stack, Box, AppBar, Toolbar, Button } from '@mui/material';
+import { GlobalStyles, Stack, } from '@mui/material';
 import { IntroBox, IntroPaper, IntroHeadingTypography, IntroBodyTypography, IntroOutlinedButton } from './styles/app.styles.js';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
