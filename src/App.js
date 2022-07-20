@@ -11,7 +11,7 @@ import MyToolbar from './components/toolbar/toolbar.js';
 //figure out some cool animations on scrolling!!
 // background can include leaves for hiking vibes
 function App() {
-  const backgroundColor = '#C3C8EA';
+  const backgroundColor = '#E6EFFE';
   return (
     <>
       <GlobalStyles
