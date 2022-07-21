@@ -9,13 +9,14 @@ export default function MyToolbar({ backgroundColor, buttonColor }) {
                 <AppBar elevation={0} position="static">
                     <Toolbar sx={{ padding: 1, backgroundColor: colorHex }}>
                         <ToolbarMainButton buttonColor={buttonColor}>
-                            Karyna Yen //
+                            Karyna Yen
                         </ToolbarMainButton>
                         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         </Typography>
                         < ToolbarSmallButton buttonColor={buttonColor}>Projects</ ToolbarSmallButton>
-                        < ToolbarSmallButton buttonColor={buttonColor}>Other</ ToolbarSmallButton>
-                        < ToolbarSmallButton buttonColor={buttonColor}>Contact Me</ ToolbarSmallButton>
+                        < ToolbarSmallButton buttonColor={buttonColor}>Interests</ ToolbarSmallButton>
+                        <ToolbarSmallButton buttonColor={buttonColor}>Resume</ ToolbarSmallButton>
+                        < ToolbarSmallButton buttonColor={buttonColor}>Contact</ ToolbarSmallButton>
                     </Toolbar>
                 </AppBar>
                 <Divider variant="fullWidth" sx={{ background: 'black', }} />

@@ -4,11 +4,12 @@ import { Button } from '@mui/material';
 
 
 const ToolbarMainButton = styled(Button)(({ variant, buttonColor }) =>({
-    fontSize: 30,
+    fontSize: 35,
     fontWeight: 'bold',
     color: 'black',
     mr: 2,
     borderColor: 'white',
+    textTransform:'none',
     '&:hover': {
         color: buttonColor ,
         backgroundColor: 'transparent',
