@@ -12,6 +12,7 @@ import MyToolbar from './components/toolbar/toolbar.js';
 // background can include leaves for hiking vibes
 function App() {
   const backgroundColor = '#E6EFFE';
+  const buttonColor = '#3979DB';
   return (
     <>
       <GlobalStyles
@@ -20,7 +21,7 @@ function App() {
         }}
       />
       
-      <MyToolbar backgroundColor={backgroundColor}> </MyToolbar>
+      <MyToolbar backgroundColor={backgroundColor} buttonColor={buttonColor}> </MyToolbar>
       <IntroBox>
         <IntroPaper elevation={3}>
           {/* now edit the spacing! */}
