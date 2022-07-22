@@ -60,9 +60,28 @@ function App() {
           {/* make the icons clickable, CENTER THEM */}
 
           <Stack spacing={2} direction="row" >
-            <LinkedInIcon />
-            <GitHubIcon />
-            <EmailIcon />
+            {/* obstract into a styles class!! */}
+            <LinkedInIcon
+              sx={{
+                '&:hover': {
+                  color: backgroundColor,
+                },
+              }}
+              onClick={event => window.open('https://www.linkedin.com/in/karynayen/', "_blank")} />
+            <GitHubIcon
+              sx={{
+                '&:hover': {
+                  color: backgroundColor,
+                },
+              }}
+              onClick={event => window.open('https://github.com/karynayen', "_blank")} />
+            <EmailIcon
+              sx={{
+                '&:hover': {
+                  color: backgroundColor,
+                },
+              }} 
+              onClick={event => window.location.href = 'mailto:yen.k@northeastern.edu'} />
           </Stack>
         </IntroPaper>
       </IntroBox>
