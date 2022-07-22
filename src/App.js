@@ -20,7 +20,7 @@ function App() {
           body: { backgroundColor: backgroundColor }
         }}
       />
-      
+
       <MyToolbar backgroundColor={backgroundColor} buttonColor={buttonColor}> </MyToolbar>
       <IntroBox>
         <IntroPaper elevation={3}>
@@ -47,7 +47,7 @@ function App() {
             along with working with the React.js and Bootstrap librarys, and using Git for version control.
             <br></br>
             <br></br>
-            Outside of software development, I am a competitive swimmer and a triathlete. 
+            Outside of software development, I am a competitive swimmer and a triathlete.
             I also enjoy hiking, skiing, and snowboarding!
             <br></br>
             <br></br>
@@ -64,8 +64,6 @@ function App() {
             <GitHubIcon />
             <EmailIcon />
           </Stack>
-
-
         </IntroPaper>
       </IntroBox>
     </>

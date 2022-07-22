@@ -13,7 +13,10 @@ export default function MyToolbar({ backgroundColor, buttonColor }) {
                         </ToolbarMainButton>
                         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         </Typography>
+                        {/* figure out how to make this the default selection */}
+                        < ToolbarSmallButton buttonColor={buttonColor}>About Me</ ToolbarSmallButton>
                         < ToolbarSmallButton buttonColor={buttonColor}>Projects</ ToolbarSmallButton>
+                        < ToolbarSmallButton buttonColor={buttonColor}>Skills</ ToolbarSmallButton>
                         < ToolbarSmallButton buttonColor={buttonColor}>Interests</ ToolbarSmallButton>
                         <ToolbarSmallButton buttonColor={buttonColor}>Resume</ ToolbarSmallButton>
                         < ToolbarSmallButton buttonColor={buttonColor}>Contact</ ToolbarSmallButton>
