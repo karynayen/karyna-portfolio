@@ -5,6 +5,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 import MyToolbar from './components/toolbar/toolbar.js';
+import resume from './resume.pdf';
 
 //abstract later
 // make sure everything is formated for phones
@@ -13,6 +14,15 @@ import MyToolbar from './components/toolbar/toolbar.js';
 function App() {
   const backgroundColor = '#E6EFFE';
   const buttonColor = '#3979DB';
+  // {TODO: FIGURE OUT WHY THE DOWNLOADING IS NOT WORKING}
+  const onDownload = () => {
+    const link = document.createElement("a");
+    link.download = './download.pdf';
+    link.href = {resume};
+    link.click();
+  };
+
+
   return (
     <>
       <GlobalStyles
@@ -32,7 +42,9 @@ function App() {
           <Stack spacing={2} direction="row">
             {/* how to add functionality to the buttons */}
             <IntroOutlinedButton variant="outlined">Projects</IntroOutlinedButton>
-            <IntroOutlinedButton variant="outlined">Resume</IntroOutlinedButton>
+            <IntroOutlinedButton onClick={onDownload} variant="outlined">
+              Resume
+            </IntroOutlinedButton>
             <IntroOutlinedButton variant="outlined">Extra!</IntroOutlinedButton>
           </Stack>
 
@@ -80,7 +92,7 @@ function App() {
                 '&:hover': {
                   color: backgroundColor,
                 },
-              }} 
+              }}
               onClick={event => window.location.href = 'mailto:yen.k@northeastern.edu'} />
           </Stack>
         </IntroPaper>
