@@ -6,6 +6,8 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 import MyToolbar from './components/toolbar/toolbar.js';
 import resume from './resume.pdf';
+import Projects from './components/projects/projects.js';
+
 
 //abstract later
 // make sure everything is formated for phones
@@ -18,7 +20,7 @@ function App() {
   const onDownload = () => {
     const link = document.createElement("a");
     link.download = './download.pdf';
-    link.href = {resume};
+    link.href = { resume };
     link.click();
   };
 
@@ -97,6 +99,10 @@ function App() {
           </Stack>
         </IntroPaper>
       </IntroBox>
+
+      {/* ADD THIS BACK !!*/}
+      {/* <Projects ></Projects> */}
+     
     </>
   );
 }
