@@ -4,13 +4,9 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { Box } from '@mui/material';
+import { Box, Grid, Item } from '@mui/material';
 
-//https://stackoverflow.com/questions/58450315/react-js-cards-using-for-loop
-// how to create a responsive grid flex react
-// follow this later
 function Projects() {
-    // export this later
     const projects = [
         {
             name: 'Image Processor',
@@ -62,27 +58,29 @@ function Projects() {
 
     return (
         <>
-            <p>hi</p>
-            <Box sx={{ display: 'flex' }}>
+        <h1>Projects</h1>
+        <br></br>
+        <br></br>
+            <Grid container spacing={2}>
                 {projects.map((project) =>
-                   <p>hi!!</p>
+                    <Grid item xs={12} sm={6} md={4}>
+                        <Card sx={{ maxWidth: 345 }}>
+                            <CardContent>
+                                <Typography gutterBottom variant="h5" component="div">
+                                    {project.name}
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    {project.description}
+                                </Typography>
+                            </CardContent>
+                            <CardActions>
+                                <Button size="small">Share</Button>
+                                <Button size="small">Learn More</Button>
+                            </CardActions>
+                        </Card>
+                    </Grid>
                 )}
-            </Box>
-            {/* <Card sx={{ maxWidth: 345 }}>
-                <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                        Lizard
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                        Lizards are a widespread group of squamate reptiles, with over 6,000
-                        species, ranging across all continents except Antarctica
-                    </Typography>
-                </CardContent>
-                <CardActions>
-                    <Button size="small">Share</Button>
-                    <Button size="small">Learn More</Button>
-                </CardActions>
-            </Card> */}
+            </Grid>
         </>
     );
 }
