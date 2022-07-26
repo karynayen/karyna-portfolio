@@ -1,6 +1,6 @@
 import './App.css';
 import { GlobalStyles, Stack, } from '@mui/material';
-import { IntroBox, IntroPaper, IntroHeadingTypography, IntroBodyTypography, IntroOutlinedButton } from './styles/app.styles.js';
+import { CenteredBox, IntroPaper, IntroHeadingTypography, IntroBodyTypography, IntroOutlinedButton } from './styles/app.styles.js';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
@@ -34,7 +34,7 @@ function App() {
       />
 
       <MyToolbar backgroundColor={backgroundColor} buttonColor={buttonColor}> </MyToolbar>
-      <IntroBox>
+      <CenteredBox>
         <IntroPaper elevation={3}>
           {/* now edit the spacing! */}
           <IntroHeadingTypography variant="h1">
@@ -98,7 +98,7 @@ function App() {
               onClick={event => window.location.href = 'mailto:yen.k@northeastern.edu'} />
           </Stack>
         </IntroPaper>
-      </IntroBox>
+      </CenteredBox>
 
       {/* ADD THIS BACK !!*/}
       {/* <Projects ></Projects> */}

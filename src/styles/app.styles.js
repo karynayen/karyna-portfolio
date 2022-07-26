@@ -3,13 +3,11 @@ import { Box, Paper, Typography, Button } from '@mui/material';
 
 
 // how to fit phones
-const IntroBox = styled(Box)({
+const CenteredBox = styled(Box)({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    alignItems: 'center',
-    width: '100%',
-    height: '100%', // how to get screen height?!
+    alignItems: 'center'
 })
 
 const IntroPaper = styled(Paper)(({ elevation }) => ({
@@ -76,4 +74,4 @@ const IntroOutlinedButton = styled(Button)(({ variant }) => ({
     },
 }))
 
-export { IntroBox, IntroPaper, IntroHeadingTypography, IntroBodyTypography, IntroContainedButton,  IntroOutlinedButton }
+export { CenteredBox, IntroPaper, IntroHeadingTypography, IntroBodyTypography, IntroContainedButton,  IntroOutlinedButton }
