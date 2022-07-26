@@ -58,29 +58,38 @@ function Projects() {
 
     return (
         <>
-        <h1>Projects</h1>
-        <br></br>
-        <br></br>
-            <Grid container spacing={2}>
-                {projects.map((project) =>
-                    <Grid item xs={12} sm={6} md={4}>
-                        <Card sx={{ maxWidth: 345 }}>
-                            <CardContent>
-                                <Typography gutterBottom variant="h5" component="div">
-                                    {project.name}
-                                </Typography>
-                                <Typography variant="body2" color="text.secondary">
-                                    {project.description}
-                                </Typography>
-                            </CardContent>
-                            <CardActions>
-                                <Button size="small">Share</Button>
-                                <Button size="small">Learn More</Button>
-                            </CardActions>
-                        </Card>
-                    </Grid>
-                )}
-            </Grid>
+            <h1>Projects</h1>
+            <br></br>
+            <br></br>
+            <Box sx={{
+                    //    ADD CENTERING!!
+                    }}>
+                <Grid container spacing={2}
+                    sx={{
+                        width: '80%',
+                        backgroundColor: 'green'
+                    }}>
+                    {projects.map((project) =>
+                        <Grid item xs={12} sm={6} md={4}>
+                            <Card sx={{ maxWidth: 345 }}>
+                                <CardContent>
+                                    <Typography gutterBottom variant="h5" component="div">
+                                        {project.name}
+                                    </Typography>
+                                    <Typography variant="body2" color="text.secondary">
+                                        {project.description}
+                                    </Typography>
+                                </CardContent>
+                                <CardActions>
+                                    <Button size="small">Share</Button>
+                                    <Button size="small">Learn More</Button>
+                                </CardActions>
+                            </Card>
+                        </Grid>
+                    )}
+                </Grid>
+            </Box>
+
         </>
     );
 }
