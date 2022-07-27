@@ -27,7 +27,6 @@ function Projects() {
                 'apply various filters and transformations, and downscale an image.' +
                 'Implements Model-View-Controller paradigm and the Command design pattern.',
             technologies: ['Java', 'Swing', 'IntelliJ'],
-            buttonMessage: 'Code Avaliable On Request',
             buttonLink: '',  // REDIRECT TO A CONTACT ME PAGE
             viewLink: '' // OPEN PROJECT DETAIL PAGE
         },
@@ -40,7 +39,6 @@ function Projects() {
                 'The Internet is a scary place, so why not bring along some ducks to help you feel safe! ' +
                 'Worked in a team of 4 to develop a Chrome extension that replaces profane words with an adorable duck emoji.',
             technologies: ['JS', 'HTML', 'CSS', 'Python'],
-            buttonMessage: 'View On Github',
             buttonLink: 'https://github.com/v-bow/ohDuck',
             viewLink: '' // OPEN PROJECT DETAIL PAGE
         },
@@ -53,7 +51,6 @@ function Projects() {
                 'Bulk email sender which allows the customized flexibility of pre made email templates ' +
                 'Integrates Mailgun API for email sending, and NextAuth for website authentication',
             technologies: ['React.js', 'TypeScript', 'MongoDB', ' Node.js'],
-            buttonMessage: 'View On Github',
             buttonLink: 'https://github.com/HackBeanpot/internal-tools',
             viewLink: '' // OPEN PROJECT DETAIL PAGE
         },
@@ -63,11 +60,10 @@ function Projects() {
             image: '',
             github: 'https://github.com/karynayen/ElevatorSimulation',
             description:
-                'Models elevator functionality using a finite state machine to determine the more efficient configuration ' +
-                'The elevator has a configurable capacity, vertical speed, rate at which the doors open and close, ' +
-                'and how many passengers can board/exit. (code avaliable upon request)',
+                'GUI based application that models elevator functionality using a finite state machine to ' + 
+                'determine the more efficient configuration ' +
+                'The elevator has capacity, vertical speed, door speed, and passenger flow configurations. ',
             technologies: ['Java', 'JavaFX', 'Eclipse',],
-            buttonMessage: 'Code Avaliable On Request',
             buttonLink: '', // REDIRECT TO A CONTACT ME PAGE,
             viewLink: '' // OPEN PROJECT DETAIL PAGE
         },
@@ -79,8 +75,18 @@ function Projects() {
             description:
                 'Responsive web page that generates a random senior quote. Featuring common app confetti and a surprise :)',
             technologies: ['JS', 'CSS', 'HTML'],
-            buttonMessage: 'View On Github',
             buttonLink: 'https://github.com/karynayen/Senior-Quote',
+            viewLink: '' // OPEN PROJECT DETAIL PAGE
+        }, 
+        {
+            codeAvaliable: false,
+            name: 'Escape from White Hall',
+            image: '',
+            github: '',
+            description:
+                'Learn about fire safety and how to navigate White hall with this handy zombie shooting game!',
+            technologies: ['Roblox', 'Lua'],
+            buttonLink: '',
             viewLink: '' // OPEN PROJECT DETAIL PAGE
         }
     ]
@@ -137,7 +143,7 @@ function GitHubButton({ project }) {
         return (
             <>
                 <Button variant="outlined" size="small" sx={{ textTransform: 'none' }}
-                    onClick={() => window.open(project.buttonLink, "_blank")}>
+                    onClick={() => window.open(project.github, "_blank")}>
                     <Stack spacing={1} direction="row" >
                         <Typography variant="body2">
                             GitHub
