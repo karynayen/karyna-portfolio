@@ -14,6 +14,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 //MAKE DATA A TEXT FIME
 // EDIT THE CARD
 //MAKE ALL CARDS THE SAME SIZE?
+// FUTURE IDEA- BE ABLE TO SORT PROJECTS BY SKILL
 
 function Projects() {
     const projects = [
@@ -62,7 +63,7 @@ function Projects() {
             description:
                 'GUI based application that models elevator functionality using a finite state machine to ' + 
                 'determine the more efficient configuration ' +
-                'The elevator has capacity, vertical speed, door speed, and passenger flow configurations. ',
+                'The elevator has capacity, vertical speed, door speed, and passenger flow configurations.',
             technologies: ['Java', 'JavaFX', 'Eclipse',],
             buttonLink: '', // REDIRECT TO A CONTACT ME PAGE,
             viewLink: '' // OPEN PROJECT DETAIL PAGE
@@ -112,11 +113,13 @@ function Projects() {
                                 <Card sx={{ maxWidth: 345 }}>
                                     <CardContent>
                                         <Typography gutterBottom variant="h5" component="div">
-                                            {project.name}
+                                            <strong>{project.name}</strong>
                                         </Typography>
                                         <Typography variant="body2" color="text.secondary">
                                             {project.description}
+                                        
                                         </Typography>
+                                        <br></br>
                                         <TechStack project={project}></TechStack>
                                     </CardContent>
                                     <CardActions>
