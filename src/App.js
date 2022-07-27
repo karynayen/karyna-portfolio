@@ -99,9 +99,12 @@ function App() {
           </Stack>
         </IntroPaper>
       </CenteredBox>
-
+      <br></br>
+      <br></br>
+      <br></br>
+      {/* IMPROVE LOL */}
       {/* ADD THIS BACK !!*/}
-      {/* <Projects ></Projects> */}
+      <Projects ></Projects>
      
      
     </>
