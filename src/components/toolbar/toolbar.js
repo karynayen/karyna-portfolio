@@ -9,7 +9,7 @@ export default function MyToolbar({ backgroundColor, buttonColor }) {
                 <AppBar elevation={0} position="static">
                     <Toolbar sx={{ padding: 1, backgroundColor: colorHex }}>
                         <ToolbarMainButton buttonColor={buttonColor}>
-                            Karyna Yen
+                            KARYNA YEN
                         </ToolbarMainButton>
                         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         </Typography>

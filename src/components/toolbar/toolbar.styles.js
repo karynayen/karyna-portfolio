@@ -7,7 +7,7 @@ const ToolbarMainButton = styled(Button)(({ variant, buttonColor }) =>({
     fontSize: 30,
     fontWeight: 'bold',
     color: 'black',
-    mr: 2,
+    mr: 1,
     borderColor: 'white',
     textTransform:'none',
     '&:hover': {

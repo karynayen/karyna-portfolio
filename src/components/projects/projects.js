@@ -6,8 +6,10 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Box, Grid } from '@mui/material';
 import { CenteredBox } from '../../styles/app.styles.js';
+import { ProjectCard } from './projects.css.js';
 
 import GitHubIcon from '@mui/icons-material/GitHub';
+import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 
 
 
@@ -15,7 +17,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 // EDIT THE CARD
 //MAKE ALL CARDS THE SAME SIZE?
 // FUTURE IDEA- BE ABLE TO SORT PROJECTS BY SKILL
-
+// ABSTRACT COLORS
 function Projects() {
     const projects = [
         {
@@ -57,11 +59,11 @@ function Projects() {
         },
         {
             codeAvaliable: true,
-            name: 'Elevator Simulation State Machine',
+            name: 'Elevator Simulation',
             image: '',
             github: 'https://github.com/karynayen/ElevatorSimulation',
             description:
-                'GUI based application that models elevator functionality using a finite state machine to ' + 
+                'GUI based application that models elevator functionality using a finite state machine to ' +
                 'determine the more efficient configuration ' +
                 'The elevator has capacity, vertical speed, door speed, and passenger flow configurations.',
             technologies: ['Java', 'JavaFX', 'Eclipse',],
@@ -78,7 +80,7 @@ function Projects() {
             technologies: ['JS', 'CSS', 'HTML'],
             buttonLink: 'https://github.com/karynayen/Senior-Quote',
             viewLink: '' // OPEN PROJECT DETAIL PAGE
-        }, 
+        },
         {
             codeAvaliable: false,
             name: 'Escape from White Hall',
@@ -100,37 +102,36 @@ function Projects() {
                 <Box sx={{
                     width: '80%'
                 }}>
-                    
-                    <Typography variant="h3" gutterBottom component="div" sx={{color:'#3979DB', fontWeight: 'bold'}}>
-                        Projects (In progress)
+                    <Typography variant="h3" component="div" sx={{ fontWeight: 'bold', fontFamily: 'Roboto' }}>
+                        Projects
                     </Typography>
-
                     <br></br>
                     <br></br>
                     <Grid container spacing={2}>
                         {projects.map((project) =>
                             <Grid item xs={12} sm={6} md={4}>
-                                <Card sx={{ maxWidth: 345 }}>
+                                <ProjectCard>
                                     <CardContent>
                                         <Typography gutterBottom variant="h5" component="div">
                                             <strong>{project.name}</strong>
                                         </Typography>
+                                        <TechStack project={project}></TechStack>
+                                        <br></br>
                                         <Typography variant="body2" color="text.secondary">
                                             {project.description}
-                                        
+
                                         </Typography>
-                                        <br></br>
-                                        <TechStack project={project}></TechStack>
                                     </CardContent>
-                                    <CardActions>
+                                    <CardActions sx={{paddingBottom:"20px"}}>
                                         <GitHubButton project={project}>{project.buttonMessage}</GitHubButton>
-                                        <Button variant="contained" size="small" sx={{ textTransform: 'none' }}>
+                                        {/* TODO: ABSTRACT COLORS */}
+                                        <Button variant="contained" size="small" sx={{ textTransform: 'none', backgroundColor: '#3979DB' }}>
                                             <Typography variant="body2">
                                                 View
                                             </Typography>
                                         </Button>
                                     </CardActions>
-                                </Card>
+                                </ProjectCard >
                             </Grid>
                         )}
                     </Grid>
@@ -145,7 +146,7 @@ function GitHubButton({ project }) {
     if (project.codeAvaliable === true) {
         return (
             <>
-                <Button variant="outlined" size="small" sx={{ textTransform: 'none' }}
+                <Button variant="outlined" size="small" sx={{ textTransform: 'none', borderColor: '#3979DB', color: '#3979DB' }}
                     onClick={() => window.open(project.github, "_blank")}>
                     <Stack spacing={1} direction="row" >
                         <Typography variant="body2">
@@ -157,7 +158,7 @@ function GitHubButton({ project }) {
     } else {
         return (
             <>
-                <Button variant="outlined" size="small" sx={{ textTransform: 'none' }}
+                <Button variant="outlined" size="small" sx={{ textTransform: 'none', borderColor: '#3979DB', color: '#3979DB' }}
                     onClick={() => window.open(project.buttonLink, "_blank")}>
                     <Typography variant="body2">
                         Code Avaliable on request
@@ -175,7 +176,7 @@ function TechStack({ project }) {
     return (<>
         <Stack spacing={2} direction="row" >
             {project.technologies.map((tool) =>
-                <Box sx={{ borderRadius: '5px', padding: '2px 5px 2px 5px', backgroundColor: 'gray' }}>
+                <Box sx={{ borderRadius: '5px', padding: '2px 5px 2px 5px', backgroundColor: '#757ce8' }}>
                     <Typography sx={{ color: 'white' }} variant="caption" display="block">
                         {tool}
                     </Typography>
