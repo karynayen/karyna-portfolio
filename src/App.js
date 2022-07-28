@@ -1,5 +1,5 @@
 import './App.css';
-import { GlobalStyles, Stack, } from '@mui/material';
+import { GlobalStyles, Stack, Box } from '@mui/material';
 import { CenteredBox, IntroPaper, IntroHeadingTypography, IntroBodyTypography, IntroOutlinedButton } from './styles/app.styles.js';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -7,12 +7,14 @@ import EmailIcon from '@mui/icons-material/Email';
 import MyToolbar from './components/toolbar/toolbar.js';
 import resume from './resume.pdf';
 import Projects from './components/projects/projects.js';
+import Contact from './components/contact/contact.js';
 
 
 //abstract later
 // make sure everything is formated for phones
 //figure out some cool animations on scrolling!!
 // background can include leaves for hiking vibes
+//- Make the first part fill up the entire page and then add a cool arrow animation under it lol
 function App() {
   const backgroundColor = '#E6EFFE';
   const buttonColor = '#3979DB';
@@ -42,7 +44,7 @@ function App() {
             <br></br>
           </IntroHeadingTypography>
           <Stack spacing={2} direction="row">
-            {/* how to add functionality to the buttons */}
+            {/* MAKE THIS BUTTON SCROLL TO AN ELEMENT*/}
             <IntroOutlinedButton variant="outlined">Projects</IntroOutlinedButton>
             <IntroOutlinedButton onClick={onDownload} variant="outlined">
               Resume
@@ -51,7 +53,7 @@ function App() {
           </Stack>
 
           <IntroBodyTypography variant="body1">
-            I am a second-year computer science student at Northeastern University,
+            I am a second-year computer science major at Northeastern University,
             interested in pursuing software developement.
             <br></br>
             <br></br>
@@ -105,6 +107,11 @@ function App() {
       {/* IMPROVE LOL */}
       {/* ADD THIS BACK !!*/}
       <Projects ></Projects>
+      
+      <br></br>
+      <br></br>
+      <br></br>
+      <Contact></Contact>
      
      
     </>
